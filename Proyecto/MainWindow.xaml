@@ -1,0 +1,29 @@
+﻿<Window x:Class="Proyecto.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Proyecto"
+        mc:Ignorable="d"
+        Title="Generador de Ejercicios">
+    <Grid Margin="0,0,-70,0">
+        <Grid.Background>
+            <ImageBrush ImageSource="fondo.jpg"/>
+        </Grid.Background>
+        <Label x:Name="Ejercicio" Content="Ejercicio" HorizontalAlignment="Left" Margin="190,79,0,0" VerticalAlignment="Top" FontSize="22" Background="#FFEE8B8B"/>
+        <Label x:Name="Serie" Content="Series" HorizontalAlignment="Left" Margin="408,79,0,0" VerticalAlignment="Top" FontSize="22" Background="#FFEE8B8B"/>
+        <Label x:Name="Repes" Content="Repeticones" HorizontalAlignment="Left" Margin="596,79,0,0" VerticalAlignment="Top" FontSize="22" Grid.ColumnSpan="2" Background="#FFEE8B8B"/>
+        <Label x:Name="mEjercicio" Content="Aqui se mostrara el ejercicio" HorizontalAlignment="Left" Margin="83,143,0,0" VerticalAlignment="Top" FontSize="18" Background="#FFF0CFA8"/>
+        <Label x:Name="mSeries" Content="Aqui saldrán las series" HorizontalAlignment="Left" Margin="371,143,0,0" VerticalAlignment="Top" FontSize="18" Background="#FFF0CFA8"/>
+        <Label Content="Aqui se mostrarán las repes" HorizontalAlignment="Left" Margin="590,143,0,0" VerticalAlignment="Top" FontSize="18" Grid.ColumnSpan="3" Background="#FFF0CFA8"/>
+        <RadioButton x:Name="btnPecho" Content="Pecho" HorizontalAlignment="Left" Margin="194,292,0,0" VerticalAlignment="Top" FontSize="20"/>
+        <RadioButton x:Name="btnPierna" Content="Pierna" HorizontalAlignment="Left" Margin="194,312,0,0" VerticalAlignment="Top" FontSize="20"/>
+        <RadioButton x:Name="btnEspalda" Content="Espalda" HorizontalAlignment="Left" Margin="194,332,0,0" VerticalAlignment="Top" FontSize="20"/>
+        <RadioButton x:Name="btnBrazo" Content="Brazo" HorizontalAlignment="Left" Margin="194,352,0,0" VerticalAlignment="Top" FontSize="20"/>
+        <RadioButton x:Name="btnHombro" Content="Hombro" HorizontalAlignment="Left" Margin="194,372,0,0" VerticalAlignment="Top" FontSize="20"/>
+        <Label Content="Selecciona la parte del cuerpo
+               " HorizontalAlignment="Left" Margin="83,255,0,0" VerticalAlignment="Top" FontSize="20" Background="#FFE48C8C" Width="278" />
+        <Button x:Name="btnGenerar" Content="Generar" HorizontalAlignment="Left" Margin="520,292,0,0" VerticalAlignment="Top" Background="#FFE8AAAA" FontSize="22"/>
+
+    </Grid>
+</Window>
