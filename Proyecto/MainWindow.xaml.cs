@@ -25,5 +25,37 @@ namespace Proyecto
             InitializeComponent();
             
         }
+
+        public void generar(object sender, EventArgs e) {
+            if (btnPecho.IsChecked == true) 
+            {
+                mEjercicio.Content = "Press Banca";
+                mSeries.Content = "4";
+                mRepes.Content = "12";
+            }
+            else if (btnPierna.IsChecked == true) {
+                mEjercicio.Content = "Extension de cuadriceps";
+                mSeries.Content = "3";
+                mRepes.Content = "20";
+
+            } else if(btnEspalda.IsChecked == true)
+            {
+                mEjercicio.Content = "Jalon al pecho";
+                mSeries.Content = "4";
+                mRepes.Content = "15";
+            }
+            else if (btnBrazo.IsChecked == true)
+            {
+                mEjercicio.Content = "Martillo";
+                mSeries.Content = "5";
+                mRepes.Content = "10";
+            }
+            else if (btnHombro.IsChecked == true)
+            {
+                mEjercicio.Content = "Elevaciones laterales";
+                mSeries.Content = "4";
+                mRepes.Content = "10";
+            }
+        }
     }
 }
