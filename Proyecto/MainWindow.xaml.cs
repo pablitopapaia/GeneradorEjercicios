@@ -54,7 +54,7 @@ namespace Proyecto
             {
                 mEjercicio.Content = "Elevaciones laterales";
                 mSeries.Content = "4";
-                mRepes.Content = "10";
+                mRepes.Content = "12";
             }
         }
     }
