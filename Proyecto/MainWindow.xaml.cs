@@ -41,7 +41,7 @@ namespace Proyecto
             } else if(btnEspalda.IsChecked == true)
             {
                 mEjercicio.Content = "Jalon al pecho";
-                mSeries.Content = "4";
+                mSeries.Content = "5";
                 mRepes.Content = "15";
             }
             else if (btnBrazo.IsChecked == true)
