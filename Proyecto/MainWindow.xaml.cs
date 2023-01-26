@@ -20,41 +20,50 @@ namespace Proyecto
     /// </summary>
     public partial class MainWindow : Window
     {
+        private String[] ejerciciosPecho = { "Press de Banca", "Press con mancuerna", "Flexiones" };
+        private String[] ejerciciosPierna = { "Extension de cuadriceps", "Zancadas", "Peso muerto" };
+        private String[] ejerciciosBrazo = { "Martillo", "Press frances", "Concentrado" };
+        private String[] ejerciciosHombro = { "Press de hombro", "Laterales", "Remo al mentón" };
+        private String[] ejerciciosEspalda = { "Jalón al pecho", "Remo con mancuerna", "Dominadas" };
+        private String[] series = { "3", "4", "5" };
+        private String[] repes = { "10", "15", "20" };
         public MainWindow()
         {
             InitializeComponent();
-            
+           
         }
-
+       
         public void generar(object sender, EventArgs e) {
+            Random random = new Random();
+            int num = random.Next(3);
             if (btnPecho.IsChecked == true) 
             {
-                mEjercicio.Content = "Press Banca";
-                mSeries.Content = "4";
-                mRepes.Content = "12";
+                mEjercicio.Content = ejerciciosPecho[num];
+                mSeries.Content = series[num];
+                mRepes.Content = repes[num];
             }
             else if (btnPierna.IsChecked == true) {
-                mEjercicio.Content = "Extension de cuadriceps";
-                mSeries.Content = "3";
-                mRepes.Content = "20";
+                mEjercicio.Content = ejerciciosPierna[num];
+                mSeries.Content = series[num];
+                mRepes.Content = repes[num];
 
             } else if(btnEspalda.IsChecked == true)
             {
-                mEjercicio.Content = "Jalon al pecho";
-                mSeries.Content = "5";
-                mRepes.Content = "15";
+                mEjercicio.Content = ejerciciosEspalda[num];
+                mSeries.Content = series[num];
+                mRepes.Content = repes[num];
             }
             else if (btnBrazo.IsChecked == true)
             {
-                mEjercicio.Content = "Martillo";
-                mSeries.Content = "5";
-                mRepes.Content = "10";
+                mEjercicio.Content = ejerciciosBrazo[num];
+                mSeries.Content = series[num];
+                mRepes.Content = repes[num];
             }
             else if (btnHombro.IsChecked == true)
             {
-                mEjercicio.Content = "Elevaciones laterales";
-                mSeries.Content = "4";
-                mRepes.Content = "12";
+                mEjercicio.Content = ejerciciosHombro[num];
+                mSeries.Content = series[num];
+                mRepes.Content = repes[num];
             }
         }
     }

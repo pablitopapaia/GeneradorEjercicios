@@ -5,12 +5,33 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Proyecto"
         mc:Ignorable="d"
-        Title="Generador de Ejercicios">
-    <Grid Margin="0,0,-30,0">
+        Title="Generador de Ejercicios" HorizontalAlignment="Center" Width="815.771" Height="491">
+    <Grid Margin="0,0,2,0">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0*"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
         <Grid.Background>
             <ImageBrush ImageSource="fondo.jpg"/>
         </Grid.Background>
-        <Label x:Name="Ejercicio" Content="Ejercicio" HorizontalAlignment="Left" Margin="148,79,0,0" VerticalAlignment="Top" FontSize="22" Foreground="White">
+        <Border BorderThickness="1" Height="460" VerticalAlignment="Top" OpacityMask="Black" Grid.RowSpan="2">
+            <Border.BorderBrush>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black" Offset="0"/>
+                    <GradientStop Color="#FFFFF417" Offset="1"/>
+                </LinearGradientBrush>
+            </Border.BorderBrush>
+            <Label Content="&#x9;&#x9;&#x9;      Generador Ejercicios" Margin="-1,-1,-1,411" FontSize="22" FontStyle="Italic">
+                <Label.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="Black" Offset="0.046"/>
+                        <GradientStop Color="White" Offset="0.301"/>
+                    </LinearGradientBrush>
+                </Label.Background>
+            </Label>
+            
+        </Border>
+        <Label x:Name="Ejercicio" Content="Ejercicio" HorizontalAlignment="Left" Margin="134,79,0,0" VerticalAlignment="Top" FontSize="22" Foreground="White" Grid.RowSpan="2">
             <Label.Background>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <GradientStop Color="Black" Offset="0"/>
@@ -19,7 +40,7 @@
                 </LinearGradientBrush>
             </Label.Background>
         </Label>
-        <Label x:Name="Serie" Content="Series" HorizontalAlignment="Left" Margin="406,79,0,0" VerticalAlignment="Top" FontSize="22" Foreground="White">
+        <Label x:Name="Serie" Content="Series" HorizontalAlignment="Left" Margin="376,79,0,0" VerticalAlignment="Top" FontSize="22" Foreground="White" Grid.RowSpan="2">
             <Label.Background>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <GradientStop Color="Black" Offset="0"/>
@@ -28,7 +49,7 @@
                 </LinearGradientBrush>
             </Label.Background>
         </Label>
-        <Label x:Name="Repes" Content="Repeticones" HorizontalAlignment="Left" Margin="616,79,0,0" VerticalAlignment="Top" FontSize="22" Foreground="White">
+        <Label x:Name="Repes" Content="Repeticones" HorizontalAlignment="Left" Margin="561.334,79,0,0" VerticalAlignment="Top" FontSize="22" Foreground="White" Grid.RowSpan="2">
             <Label.Background>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <GradientStop Color="Black" Offset="0"/>
@@ -37,16 +58,12 @@
                 </LinearGradientBrush>
             </Label.Background>
         </Label>
-        <Label x:Name="mEjercicio" Content="Aqui se mostrara el ejercicio" HorizontalAlignment="Left" Margin="83,143,0,0" VerticalAlignment="Top" FontSize="18" Background="White" Width="200"/>
-        <Label x:Name="mSeries" Content="Aqui saldrán las series" HorizontalAlignment="Left" Margin="351,143,0,0" VerticalAlignment="Top" FontSize="18" Background="White" Width="200"/>
-        <Label x:Name="mRepes" Content="Aqui se mostrarán las repes" HorizontalAlignment="Left" Margin="570,143,0,0" VerticalAlignment="Top" FontSize="18" Background="White" Width="200"/>
-        <RadioButton x:Name="btnPecho" Content="Pecho" HorizontalAlignment="Left" Margin="190,307,0,0" VerticalAlignment="Top" FontSize="20" Background="White"/>
-        <RadioButton x:Name="btnPierna" Content="Pierna" HorizontalAlignment="Left" Margin="190,328,0,0" VerticalAlignment="Top" FontSize="20"/>
-        <RadioButton x:Name="btnEspalda" Content="Espalda" HorizontalAlignment="Left" Margin="190,354,0,0" VerticalAlignment="Top" FontSize="20"/>
-        <RadioButton x:Name="btnBrazo" Content="Brazo" HorizontalAlignment="Left" Margin="190,380,0,0" VerticalAlignment="Top" FontSize="20"/>
-        <RadioButton x:Name="btnHombro" Content="Hombro" HorizontalAlignment="Left" Margin="190,406,0,0" VerticalAlignment="Top" FontSize="20"/>
+        <Label x:Name="mEjercicio" Content="" HorizontalAlignment="Left" Margin="83,143,0,0" VerticalAlignment="Top" FontSize="18" Background="White" Width="200" Grid.RowSpan="2"/>
+        <Label x:Name="mSeries" Content="" HorizontalAlignment="Left" Margin="314.333,143,0,0" VerticalAlignment="Top" FontSize="18" Background="White" Width="200" Grid.RowSpan="2"/>
+        <Label x:Name="mRepes" Content="" HorizontalAlignment="Left" Margin="540.334,143,0,0" VerticalAlignment="Top" FontSize="18" Background="White" Width="200" Grid.RowSpan="2"/>
+
         <Label Content="Selecciona la parte del cuerpo
-               " HorizontalAlignment="Left" Margin="83,255,0,0" VerticalAlignment="Top" FontSize="20" Width="278" Height="37" >
+               " HorizontalAlignment="Left" Margin="83,218,0,0" VerticalAlignment="Top" FontSize="20" Width="278" Height="37" Grid.RowSpan="2" >
             <Label.Background>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <GradientStop Color="Black" Offset="0"/>
@@ -55,7 +72,7 @@
                 </LinearGradientBrush>
             </Label.Background>
         </Label>
-        <Button x:Name="btnGenerar" Content="Generar" Click="generar" HorizontalAlignment="Left" Margin="570,347,0,0" VerticalAlignment="Top" FontSize="22" Foreground="#FFEEE5E5" BorderBrush="#FFA62323">
+        <Button x:Name="btnGenerar" Content="Generar" Click="generar" HorizontalAlignment="Left" Margin="561.334,296,0,0" VerticalAlignment="Top" FontSize="22" Foreground="#FFEEE5E5" BorderBrush="#FFA62323" Grid.RowSpan="2">
             <Button.Background>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <GradientStop Color="Black" Offset="0"/>
@@ -63,6 +80,23 @@
                 </LinearGradientBrush>
             </Button.Background>
         </Button>
+        <Rectangle HorizontalAlignment="Left" Height="144.275" Margin="83,261.725,0,0" Stroke="Black" VerticalAlignment="Top" Width="278" Grid.RowSpan="2">
+            <Rectangle.Fill>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FFFFFBFB" Offset="0"/>
+                    <GradientStop Color="#FFD975FF" Offset="0.439"/>
+                </LinearGradientBrush>
+            </Rectangle.Fill>
+        </Rectangle>
+        <RadioButton x:Name="btnPecho" Content="Pecho" HorizontalAlignment="Left" Margin="177.412,270.4,0,0" VerticalAlignment="Top" FontSize="20" Background="White" Grid.RowSpan="2"/>
+        <RadioButton x:Name="btnPierna" Content="Pierna" HorizontalAlignment="Left" Margin="177.412,296,0,0" VerticalAlignment="Top" FontSize="20" Grid.RowSpan="2"/>
+        <RadioButton x:Name="btnEspalda" Content="Espalda" HorizontalAlignment="Left" Margin="177.412,321.6,0,0" VerticalAlignment="Top" FontSize="20" Grid.RowSpan="2"/>
+        <RadioButton x:Name="btnBrazo" Content="Brazo" HorizontalAlignment="Left" Margin="177.412,347,0,0" VerticalAlignment="Top" FontSize="20" Grid.RowSpan="2"/>
+        <RadioButton x:Name="btnHombro" Content="Hombro" HorizontalAlignment="Left" Margin="177.412,372.6,0,0" VerticalAlignment="Top" FontSize="20" Grid.RowSpan="2"/>
+      
+
+
+
 
     </Grid>
 </Window>
