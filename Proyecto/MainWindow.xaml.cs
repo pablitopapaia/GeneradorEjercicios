@@ -1,23 +1,13 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
+
 
 namespace Proyecto
 {
     /// <summary>
     /// Lógica de interacción para MainWindow.xaml
     /// </summary>
+    
     public partial class MainWindow : Window
     {
         private String[] ejerciciosPecho = { "Press de Banca", "Press con mancuerna", "Flexiones" };
@@ -27,6 +17,8 @@ namespace Proyecto
         private String[] ejerciciosEspalda = { "Jalón al pecho", "Remo con mancuerna", "Dominadas" };
         private String[] series = { "3", "4", "5" };
         private String[] repes = { "10", "15", "20" };
+        private Boolean registro = false;
+        private Boolean iniciarSesion = false;
         public MainWindow()
         {
             InitializeComponent();
@@ -66,5 +58,39 @@ namespace Proyecto
                 mRepes.Content = repes[num];
             }
         }
+
+        private void registrarse(object sender, RoutedEventArgs e)
+        {
+            cajaLogin.Visibility = Visibility.Visible;
+            t1.Visibility = Visibility.Visible;
+            t2.Visibility = Visibility.Visible;
+            usu.Visibility = Visibility.Visible;
+            pass.Visibility = Visibility.Visible;
+            botonLog.Visibility = Visibility.Visible;
+            registro = true;
+        }
+
+        private void iniciar(object sender, RoutedEventArgs e)
+        {
+            cajaLogin.Visibility = Visibility.Visible;
+            t1.Visibility = Visibility.Visible;
+            t2.Visibility = Visibility.Visible;
+            usu.Visibility = Visibility.Visible;
+            pass.Visibility = Visibility.Visible;
+            botonLog.Visibility = Visibility.Visible;
+            iniciarSesion = true;
+        }
+
+        private void Enviar(object sender, RoutedEventArgs e)
+        {
+            cajaLogin.Visibility = Visibility.Hidden;
+            t1.Visibility = Visibility.Hidden;
+            t2.Visibility = Visibility.Hidden;
+            usu.Visibility = Visibility.Hidden;
+            pass.Visibility = Visibility.Hidden;
+            botonLog.Visibility = Visibility.Hidden;
+            
+        }
+
     }
 }
