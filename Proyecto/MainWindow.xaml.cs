@@ -1,11 +1,11 @@
 ﻿using System;
 using System.Windows;
-
+using System.Windows.Input;
 
 namespace Proyecto
 {
     /// <summary>
-    /// Lógica de interacción para MainWindow.xaml
+    /// Esta ventana se encarga de hacer la función principal del programa.
     /// </summary>
     
     public partial class MainWindow : Window
@@ -17,14 +17,53 @@ namespace Proyecto
         private String[] ejerciciosEspalda = { "Jalón al pecho", "Remo con mancuerna", "Dominadas" };
         private String[] series = { "3", "4", "5" };
         private String[] repes = { "10", "15", "20" };
-        private Boolean registro = false;
-        private Boolean iniciarSesion = false;
+        
+        public static String Registro;
         public MainWindow()
         {
             InitializeComponent();
-           
+            ResizeMode = ResizeMode.NoResize;
+            mEjercicio.KeyDown += mEjercicio_KeyDown;
         }
-       
+
+        public void mEjercicio_KeyDown(object sender, KeyEventArgs e) {
+            if (e.Key == Key.Enter) {
+                Random random = new Random();
+                int num = random.Next(3);
+                if (btnPecho.IsChecked == true)
+                {
+                    mEjercicio.Content = ejerciciosPecho[num];
+                    mSeries.Content = series[num];
+                    mRepes.Content = repes[num];
+                }
+                else if (btnPierna.IsChecked == true)
+                {
+                    mEjercicio.Content = ejerciciosPierna[num];
+                    mSeries.Content = series[num];
+                    mRepes.Content = repes[num];
+
+                }
+                else if (btnEspalda.IsChecked == true)
+                {
+                    mEjercicio.Content = ejerciciosEspalda[num];
+                    mSeries.Content = series[num];
+                    mRepes.Content = repes[num];
+                }
+                else if (btnBrazo.IsChecked == true)
+                {
+                    mEjercicio.Content = ejerciciosBrazo[num];
+                    mSeries.Content = series[num];
+                    mRepes.Content = repes[num];
+                }
+                else if (btnHombro.IsChecked == true)
+                {
+                    mEjercicio.Content = ejerciciosHombro[num];
+                    mSeries.Content = series[num];
+                    mRepes.Content = repes[num];
+                }
+            }
+        }
+
         public void generar(object sender, EventArgs e) {
             Random random = new Random();
             int num = random.Next(3);
@@ -61,36 +100,19 @@ namespace Proyecto
 
         private void registrarse(object sender, RoutedEventArgs e)
         {
-            cajaLogin.Visibility = Visibility.Visible;
-            t1.Visibility = Visibility.Visible;
-            t2.Visibility = Visibility.Visible;
-            usu.Visibility = Visibility.Visible;
-            pass.Visibility = Visibility.Visible;
-            botonLog.Visibility = Visibility.Visible;
-            registro = true;
+            Window1 w = new Window1();
+            w.Show();
         }
 
         private void iniciar(object sender, RoutedEventArgs e)
         {
-            cajaLogin.Visibility = Visibility.Visible;
-            t1.Visibility = Visibility.Visible;
-            t2.Visibility = Visibility.Visible;
-            usu.Visibility = Visibility.Visible;
-            pass.Visibility = Visibility.Visible;
-            botonLog.Visibility = Visibility.Visible;
-            iniciarSesion = true;
+            Window2 w = new Window2();
+            w.Show();
         }
 
-        private void Enviar(object sender, RoutedEventArgs e)
+        private void agregar(object sender, RoutedEventArgs e)
         {
-            cajaLogin.Visibility = Visibility.Hidden;
-            t1.Visibility = Visibility.Hidden;
-            t2.Visibility = Visibility.Hidden;
-            usu.Visibility = Visibility.Hidden;
-            pass.Visibility = Visibility.Hidden;
-            botonLog.Visibility = Visibility.Hidden;
-            
-        }
 
+        }
     }
 }
