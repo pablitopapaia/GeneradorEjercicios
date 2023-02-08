@@ -1,6 +1,9 @@
 ﻿using System;
+using System.Collections;
 using System.Windows;
 using System.Windows.Input;
+using System.Linq;
+using System.Xml.Linq;
 
 namespace Proyecto
 {
@@ -17,7 +20,7 @@ namespace Proyecto
         private String[] ejerciciosEspalda = { "Jalón al pecho", "Remo con mancuerna", "Dominadas" };
         private String[] series = { "3", "4", "5" };
         private String[] repes = { "10", "15", "20" };
-        
+        ArrayList copiador = new ArrayList();
         public static String Registro;
         public MainWindow()
         {
@@ -29,7 +32,7 @@ namespace Proyecto
         public void mEjercicio_KeyDown(object sender, KeyEventArgs e) {
             if (e.Key == Key.Enter) {
                 Random random = new Random();
-                int num = random.Next(3);
+                int num = random.Next(ejerciciosPecho.Length);
                 if (btnPecho.IsChecked == true)
                 {
                     mEjercicio.Content = ejerciciosPecho[num];
@@ -41,13 +44,13 @@ namespace Proyecto
                     mEjercicio.Content = ejerciciosPierna[num];
                     mSeries.Content = series[num];
                     mRepes.Content = repes[num];
-
                 }
                 else if (btnEspalda.IsChecked == true)
                 {
                     mEjercicio.Content = ejerciciosEspalda[num];
                     mSeries.Content = series[num];
                     mRepes.Content = repes[num];
+                   
                 }
                 else if (btnBrazo.IsChecked == true)
                 {
@@ -109,10 +112,40 @@ namespace Proyecto
             Window2 w = new Window2();
             w.Show();
         }
-
+        
+        //No funciona
         private void agregar(object sender, RoutedEventArgs e)
         {
+            XDocument doc = XDocument.Load(@"../../../Proyecto/ejercicios/ejercicios.xml");
 
+            var ejercicios = from ejercicio in doc.Descendants("ejercicio")
+                             select new
+                             {
+                                 Nombre = ejercicio.Value,
+                                 Musculo = ejercicio.Parent.Name.LocalName
+                             };
+
+            foreach (var ejercicio in ejercicios)
+            {
+                switch (ejercicio.Musculo)
+                {
+                    case "pecho":
+                        ejerciciosPecho = ejerciciosPecho.Concat(new String[] { ejercicio.Nombre }).ToArray();
+                        break;
+                    case "pierna":
+                        ejerciciosPierna = ejerciciosPierna.Concat(new String[] { ejercicio.Nombre }).ToArray();
+                        break;
+                    case "brazo":
+                        ejerciciosBrazo = ejerciciosBrazo.Concat(new String[] { ejercicio.Nombre }).ToArray();
+                        break;
+                    case "hombro":
+                        ejerciciosHombro = ejerciciosHombro.Concat(new String[] { ejercicio.Nombre }).ToArray();
+                        break;
+                    case "espalda":
+                        ejerciciosEspalda = ejerciciosEspalda.Concat(new String[] { ejercicio.Nombre }).ToArray();
+                        break;
+                }
+            }
         }
     }
 }

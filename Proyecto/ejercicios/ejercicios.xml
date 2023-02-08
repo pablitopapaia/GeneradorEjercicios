@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<ejercicios>
+  <grupoMusculo nombre="Pecho">
+    <ejercicio>Fly</ejercicio>
+    <ejercicio>Push ups</ejercicio>
+  </grupoMusculo>
+  <grupoMusculo nombre="Piernas">
+    <ejercicio>Sentadillas</ejercicio>
+    <ejercicio>Lunges</ejercicio>
+  </grupoMusculo>
+  <grupoMusculo nombre="Brazos">
+    <ejercicio>Flexiones de bíceps</ejercicio>
+    <ejercicio>Curl de bíceps</ejercicio>
+  </grupoMusculo>
+  <grupoMusculo nombre="Hombros">
+    <ejercicio>Elevaciones frontales</ejercicio>
+    <ejercicio>Elevaciones laterales</ejercicio>
+  </grupoMusculo>
+  <grupoMusculo nombre="Espalda">
+    <ejercicio>Encorvamientos</ejercicio>
+    <ejercicio>Pulley</ejercicio>
+  </grupoMusculo>
+</ejercicios>
