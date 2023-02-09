@@ -9,3 +9,5 @@ consejos para solucionar fallos o mofificar características para la adecuación
 copia del inicial ReadMe:
 Buena indicación, además señalar que será desarrollado en C#, y el diseño de su interfaz con XAML, junto a plugins xml.
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Hacerlo Público.
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
