@@ -10,6 +10,7 @@ namespace Proyecto
     /// </summary>
     public partial class Window2 : Window
     {
+        private bool loginBien;
         public Window2()
         {
             InitializeComponent();
@@ -23,9 +24,16 @@ namespace Proyecto
             {
                 if (line.Split(':')[0].Equals(usu.Text.ToString()) && line.Split(':')[1].Equals(pass.Password.ToString()))
                 {
+                    loginBien = true;
                     Close();
                 }
             }
+        }
+        public bool getLoginBien() {
+            return loginBien;
+        }
+        public void setLoginBien(bool loginBien) {
+            this.loginBien = loginBien;
         }
     }
 }

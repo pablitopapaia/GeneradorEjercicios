@@ -109,6 +109,7 @@ namespace Proyecto
         {
             Window2 w = new Window2();
             w.Show();
+            
         }
         
         //No funciona

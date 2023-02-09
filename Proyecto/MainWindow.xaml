@@ -29,8 +29,9 @@
             <Label.Background>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <GradientStop Color="Black" Offset="0"/>
-                    <GradientStop Color="#FF5D2DFF" Offset="1"/>
-                    <GradientStop Color="#FF5529EA" Offset="0.423"/>
+                    <GradientStop Color="#FF5D2DFF" Offset="0.923"/>
+                    <GradientStop Color="#FF7A63C5" Offset="0.174"/>
+                    <GradientStop Color="#FF7660BF" Offset="0.563"/>
                 </LinearGradientBrush>
             </Label.Background>
         </Label>
@@ -38,8 +39,9 @@
             <Label.Background>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <GradientStop Color="Black" Offset="0"/>
-                    <GradientStop Color="#FF5D2DFF" Offset="1"/>
-                    <GradientStop Color="#FF5529EA" Offset="0.423"/>
+                    <GradientStop Color="#FF5D2DFF" Offset="0.923"/>
+                    <GradientStop Color="#FF7A63C5" Offset="0.174"/>
+                    <GradientStop Color="#FF7660BF" Offset="0.563"/>
                 </LinearGradientBrush>
             </Label.Background>
         </Label>
@@ -47,8 +49,9 @@
             <Label.Background>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <GradientStop Color="Black" Offset="0"/>
-                    <GradientStop Color="#FF5D2DFF" Offset="1"/>
-                    <GradientStop Color="#FF5529EA" Offset="0.423"/>
+                    <GradientStop Color="#FF5D2DFF" Offset="0.923"/>
+                    <GradientStop Color="#FF7A63C5" Offset="0.174"/>
+                    <GradientStop Color="#FF7660BF" Offset="0.563"/>
                 </LinearGradientBrush>
             </Label.Background>
         </Label>
@@ -62,15 +65,15 @@
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <GradientStop Color="Black" Offset="0"/>
                     <GradientStop Color="White" Offset="1"/>
-                    <GradientStop Color="#FFD65AF1" Offset="0.556"/>
+                    <GradientStop Color="#FFEFA7FF" Offset="0.556"/>
                 </LinearGradientBrush>
             </Label.Background>
         </Label>
-        <Button x:Name="btnGenerar" Content="Generar" Click="generar" HorizontalAlignment="Left" Margin="414,46,0,0" VerticalAlignment="Top" FontSize="22" Foreground="#FFEEE5E5" BorderBrush="#FFA62323" Grid.Row="5" Height="33" Width="81">
+        <Button x:Name="btnGenerar" Content="Generar" Click="generar" HorizontalAlignment="Left" Margin="414,46,0,0" VerticalAlignment="Top" FontSize="22" Foreground="#FFEEE5E5" BorderBrush="#FFAA7373" Grid.Row="5" Height="33" Width="81">
             <Button.Background>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                    <GradientStop Color="Black" Offset="0"/>
-                    <GradientStop Color="#FFF1C21F" Offset="1"/>
+                    <GradientStop Color="Black" Offset="1"/>
+                    <GradientStop Color="#FF823BE8" Offset="0.696"/>
                 </LinearGradientBrush>
             </Button.Background>
         </Button>
@@ -78,7 +81,7 @@
             <Rectangle.Fill>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <GradientStop Color="#FFFFFBFB" Offset="0"/>
-                    <GradientStop Color="#FFD975FF" Offset="0.439"/>
+                    <GradientStop Color="#FFC6ABD1" Offset="0.439"/>
                 </LinearGradientBrush>
             </Rectangle.Fill>
         </Rectangle>
@@ -94,9 +97,10 @@
             <Button.Background>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <GradientStop Color="Black" Offset="1"/>
-                    <GradientStop Color="#FFE01B1B" Offset="0.696"/>
+                    <GradientStop Color="#FF823BE8" Offset="0.696"/>
                 </LinearGradientBrush>
             </Button.Background>
         </Button>
+        <Label Content="Todavía no se ha iniciado sesión" x:Name="textoLogin" HorizontalAlignment="Left" Margin="55,12,0,0" Grid.RowSpan="2" VerticalAlignment="Top"/>
     </Grid>
 </Window>
