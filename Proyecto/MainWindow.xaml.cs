@@ -20,8 +20,6 @@ namespace Proyecto
         private String[] ejerciciosEspalda = { "Jalón al pecho", "Remo con mancuerna", "Dominadas" };
         private String[] series = { "3", "4", "5" };
         private String[] repes = { "10", "15", "20" };
-        ArrayList copiador = new ArrayList();
-        public static String Registro;
         public MainWindow()
         {
             InitializeComponent();
