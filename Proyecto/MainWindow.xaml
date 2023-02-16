@@ -7,16 +7,8 @@
         WindowStartupLocation="CenterScreen"
         mc:Ignorable="d"
         Title="Generador de Ejercicios" HorizontalAlignment="Center" Width="815.771" Height="491">
-    <Grid Margin="0,0,2,0">
-        <Grid.RowDefinitions>
-            <RowDefinition Height="0*"/>
-            <RowDefinition Height="75*"/>
-            <RowDefinition Height="53*"/>
-            <RowDefinition Height="70*"/>
-            <RowDefinition Height="33*"/>
-            <RowDefinition Height="188*"/>
-            <RowDefinition Height="42*"/>
-        </Grid.RowDefinitions>
+    <Grid>
+
         <Grid.Background>
             <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                 <GradientStop Color="Black" Offset="0"/>
@@ -25,39 +17,8 @@
                 <GradientStop Color="#FF070707" Offset="0.95"/>
             </LinearGradientBrush>
         </Grid.Background>
-        <Label x:Name="Ejercicio" Content="Ejercicio" HorizontalAlignment="Left" Margin="134,1,0,0" VerticalAlignment="Top" FontSize="22" Foreground="White" Height="39" Width="89" Grid.Row="2">
-            <Label.Background>
-                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                    <GradientStop Color="Black" Offset="0"/>
-                    <GradientStop Color="#FF5D2DFF" Offset="0.923"/>
-                    <GradientStop Color="#FF7A63C5" Offset="0.174"/>
-                    <GradientStop Color="#FF7660BF" Offset="0.563"/>
-                </LinearGradientBrush>
-            </Label.Background>
-        </Label>
-        <Label x:Name="Serie" Content="Series" HorizontalAlignment="Left" Margin="376,1,0,0" VerticalAlignment="Top" FontSize="22" Foreground="White" Height="39" Width="67" Grid.Row="2">
-            <Label.Background>
-                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                    <GradientStop Color="Black" Offset="0"/>
-                    <GradientStop Color="#FF5D2DFF" Offset="0.923"/>
-                    <GradientStop Color="#FF7A63C5" Offset="0.174"/>
-                    <GradientStop Color="#FF7660BF" Offset="0.563"/>
-                </LinearGradientBrush>
-            </Label.Background>
-        </Label>
-        <Label x:Name="Repes" Content="Repeticones" HorizontalAlignment="Left" Margin="561,1,0,0" VerticalAlignment="Top" FontSize="22" Foreground="White" Height="39" Width="128" Grid.Row="2">
-            <Label.Background>
-                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                    <GradientStop Color="Black" Offset="0"/>
-                    <GradientStop Color="#FF5D2DFF" Offset="0.923"/>
-                    <GradientStop Color="#FF7A63C5" Offset="0.174"/>
-                    <GradientStop Color="#FF7660BF" Offset="0.563"/>
-                </LinearGradientBrush>
-            </Label.Background>
-        </Label>
-        <Label x:Name="mEjercicio" Content="" HorizontalAlignment="Left" Margin="83,16,0,0" VerticalAlignment="Top" FontSize="18" Background="White" Width="200" Grid.Row="3" Height="34"/>
-        <Label x:Name="mSeries" Content="" HorizontalAlignment="Left" Margin="317,16,0,0" VerticalAlignment="Top" FontSize="18" Background="White" Width="200" Grid.Row="3" Height="34"/>
-        <Label x:Name="mRepes" Content="" HorizontalAlignment="Left" Margin="540,16,0,0" VerticalAlignment="Top" FontSize="18" Background="White" Width="200" Grid.Row="3" Height="34"/>
+
+
 
         <Label Content="Selecciona la parte del cuerpo
                " HorizontalAlignment="Left" Margin="83,2,0,0" VerticalAlignment="Top" FontSize="20" Width="276" Height="39" Grid.Row="5" >
@@ -101,6 +62,42 @@
                 </LinearGradientBrush>
             </Button.Background>
         </Button>
-        <Label Content="Todavía no se ha iniciado sesión" x:Name="textoLogin" HorizontalAlignment="Left" Margin="55,12,0,0" Grid.RowSpan="2" VerticalAlignment="Top"/>
+        <StackPanel HorizontalAlignment="Center" Height="38" VerticalAlignment="Top" Width="283" Orientation="Horizontal">
+            <Label x:Name="Ejercicio" Content="Ejercicio" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="22" Foreground="White" Height="39" Width="89" >
+                <Label.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="Black" Offset="0"/>
+                        <GradientStop Color="#FF5D2DFF" Offset="0.923"/>
+                        <GradientStop Color="#FF7A63C5" Offset="0.174"/>
+                        <GradientStop Color="#FF7660BF" Offset="0.563"/>
+                    </LinearGradientBrush>
+                </Label.Background>
+            </Label>
+            <Label x:Name="Serie" Content="Series" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="22" Foreground="White" Height="39" Width="67" >
+                <Label.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="Black" Offset="0"/>
+                        <GradientStop Color="#FF5D2DFF" Offset="0.923"/>
+                        <GradientStop Color="#FF7A63C5" Offset="0.174"/>
+                        <GradientStop Color="#FF7660BF" Offset="0.563"/>
+                    </LinearGradientBrush>
+                </Label.Background>
+            </Label>
+            <Label x:Name="Repes" Content="Repeticones" HorizontalAlignment="Right"  VerticalAlignment="Top" FontSize="22" Foreground="White" Height="39" Width="128" >
+                <Label.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="Black" Offset="0"/>
+                        <GradientStop Color="#FF5D2DFF" Offset="0.923"/>
+                        <GradientStop Color="#FF7A63C5" Offset="0.174"/>
+                        <GradientStop Color="#FF7660BF" Offset="0.563"/>
+                    </LinearGradientBrush>
+                </Label.Background>
+            </Label>
+        </StackPanel>
+        <StackPanel HorizontalAlignment="Left" Height="46" Orientation="Horizontal"  VerticalAlignment="Center" Width="601" >
+            <Label x:Name="mEjercicio" Content="" HorizontalAlignment="Left"  VerticalAlignment="Top" FontSize="18" Background="White" Width="200" Grid.Row="3" Height="34"/>
+            <Label x:Name="mSeries" Content="" HorizontalAlignment="Left"  VerticalAlignment="Top" FontSize="18" Background="White" Width="200" Grid.Row="3" Height="34"/>
+            <Label x:Name="mRepes" Content="" HorizontalAlignment="Left"  VerticalAlignment="Top" FontSize="18" Background="White" Width="200" Grid.Row="3" Height="34"/>
+    </StackPanel>
     </Grid>
 </Window>
