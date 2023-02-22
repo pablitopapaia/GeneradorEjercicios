@@ -1,9 +1,10 @@
 ﻿using System;
-using System.Collections;
 using System.Windows;
+using System.Configuration;
 using System.Windows.Input;
 using System.Linq;
 using System.Xml.Linq;
+using System.Windows.Media;
 
 namespace Proyecto
 {
@@ -26,6 +27,11 @@ namespace Proyecto
             InitializeComponent();
             ResizeMode = ResizeMode.NoResize;
             mEjercicio.KeyDown += mEjercicio_KeyDown;
+            string backgroundColorString = ConfigurationManager.AppSettings["BackgroundColor"];
+            // Establecer el color de fondo de la ventana principal
+            Color backgroundColor = (Color)ColorConverter.ConvertFromString(backgroundColorString);
+            miVentana.Background = new SolidColorBrush(backgroundColor);
+
         }
 
         public void mEjercicio_KeyDown(object sender, KeyEventArgs e) {
