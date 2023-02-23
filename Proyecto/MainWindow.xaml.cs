@@ -28,10 +28,13 @@ namespace Proyecto
             ResizeMode = ResizeMode.NoResize;
             mEjercicio.KeyDown += mEjercicio_KeyDown;
             string backgroundColorString = ConfigurationManager.AppSettings["BackgroundColor"];
+            string colorBoton = ConfigurationManager.AppSettings["ButtonColor"];
             // Establecer el color de fondo de la ventana principal
             Color backgroundColor = (Color)ColorConverter.ConvertFromString(backgroundColorString);
+            Color backBoton = (Color)ColorConverter.ConvertFromString(colorBoton);
             miVentana.Background = new SolidColorBrush(backgroundColor);
-
+            btnAgregar.Background = new SolidColorBrush(backBoton);
+            btnGenerar.Background = new SolidColorBrush(backBoton);
         }
 
         public void mEjercicio_KeyDown(object sender, KeyEventArgs e) {
@@ -118,7 +121,12 @@ namespace Proyecto
             w.Show();
             
         }
-        
+        private void abrirConfig(object sender, RoutedEventArgs e)
+        {
+            Window3 w = new Window3();
+            w.Show();
+
+        }
         //No funciona
         private void agregar(object sender, RoutedEventArgs e)
         {

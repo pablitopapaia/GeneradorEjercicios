@@ -38,21 +38,11 @@
             </Label.Background>
         </Label>
         <StackPanel Grid.Column="2" Grid.Row="4">
-            <Button x:Name="btnGenerar" Content="Generar" Click="generar" HorizontalAlignment="Left"  VerticalAlignment="Top" FontSize="22" Foreground="#FFEEE5E5" BorderBrush="#FFAA7373" Height="33" Width="81" Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2">
-                <Button.Background>
-                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                        <GradientStop Color="Black" Offset="1"/>
-                        <GradientStop Color="#FF823BE8" Offset="0.696"/>
-                    </LinearGradientBrush>
-                </Button.Background>
+            <Button x:Name="btnGenerar" Content="Generar" Click="generar" HorizontalAlignment="Left"  VerticalAlignment="Top" FontSize="22" Foreground="#FFEEE5E5" BorderBrush="#FFAA7373" Height="33" Width="81" Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2" Background="Purple">
+                
             </Button>
-            <Button Content="Agregar" HorizontalAlignment="Left" VerticalAlignment="Top" Click="agregar" Foreground="#FFEEE5E5" FontSize="22" Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="2" >
-                <Button.Background>
-                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                        <GradientStop Color="Black" Offset="1"/>
-                        <GradientStop Color="#FF823BE8" Offset="0.696"/>
-                    </LinearGradientBrush>
-                </Button.Background>
+            <Button Content="Agregar" x:Name="btnAgregar" HorizontalAlignment="Left" VerticalAlignment="Top" Click="agregar" Foreground="#FFEEE5E5" FontSize="22" Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="2" Background="Purple">
+                
             </Button>
         </StackPanel>
         <Rectangle HorizontalAlignment="Center" Height="144"  Stroke="Black" VerticalAlignment="Top" Width="173" Grid.Row="4" Grid.ColumnSpan="2">
@@ -71,8 +61,9 @@
             <RadioButton x:Name="btnHombro" Content="Hombro" HorizontalAlignment="Left"  VerticalAlignment="Top" FontSize="20" Height="26" Width="93" Grid.Row="3" Grid.ColumnSpan="2"/>
         </StackPanel>
         <StackPanel HorizontalAlignment="Right"  VerticalAlignment="Top" Grid.Column="3" Grid.Row="0" Orientation="Horizontal">
-            <Button Content="Registrarse" HorizontalAlignment="Center"  VerticalAlignment="Top" Width="76" Background="#FF665555"  Foreground="#FFEEE5E5" Click="registrarse" Height="20"  />
-            <Button Content="Iniciar sesion" HorizontalAlignment="Right"  VerticalAlignment="Top" Width="76" Click="iniciar" Background="#FF665555"  Foreground="#FFEEE5E5" Height="20"/>
+            <Button Content="Registrarse" HorizontalAlignment="Center"  VerticalAlignment="Top" Width="76" Background="#FF665555"  Foreground="#FFEEE5E5" Click="registrarse"  />
+            <Button Content="Iniciar sesion" HorizontalAlignment="Right"  VerticalAlignment="Top" Width="76" Click="iniciar" Background="#FF665555"  Foreground="#FFEEE5E5"/>
+            <Button Content="Configuración" Grid.Column="3" HorizontalAlignment="Left" VerticalAlignment="Top" Width="74"  Background="#FF665555"  Foreground="#FFEEE5E5" Click="abrirConfig"/>
         </StackPanel>
         <Label x:Name="sesion" Content="" HorizontalAlignment="Left" Margin="40,12,0,0" VerticalAlignment="Top"/>
 
@@ -111,6 +102,7 @@
         <Label x:Name="mEjercicio" Content="" HorizontalAlignment="Center"  VerticalAlignment="Top" FontSize="18" Background="White" Width="200" Height="34" Grid.Row="2" />
         <Label x:Name="mSeries" Content="" HorizontalAlignment="Center"  VerticalAlignment="Top" FontSize="18" Background="White" Width="200" Height="34" Grid.Row="2" Grid.Column="1" />
         <Label x:Name="mRepes" Content="" HorizontalAlignment="Center"  VerticalAlignment="Top" FontSize="18" Background="White" Width="108" Height="34" Grid.Row="2" Grid.Column="2"/>
+        
 
     </Grid>
 </Window>
