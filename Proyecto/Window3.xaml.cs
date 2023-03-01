@@ -1,7 +1,6 @@
 ﻿using System.Windows;
-using System.IO;
 using System.Configuration;
-using System;
+
 
 
 namespace Proyecto
@@ -26,11 +25,8 @@ namespace Proyecto
             config.AppSettings.Settings["BackgroundColor"].Value = editFile.Text;
             config.Save();
             this.Close();
+            
         }
-        private void Abrir(object sender, RoutedEventArgs e)
-        {
-            MainWindow prueba = new MainWindow();
-            prueba.Show();
-        }
+       
     }
 }
