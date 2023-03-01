@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Proyecto"
         mc:Ignorable="d"
-        Title="Window3" Height="450" Width="800" Background="Azure">
+        Title="Window3" Closing="cerrada" Height="450" Width="800" Background="Azure">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="244*"/>

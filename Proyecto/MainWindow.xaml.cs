@@ -21,12 +21,19 @@ namespace Proyecto
         private String[] ejerciciosEspalda = { "Jalón al pecho", "Remo con mancuerna", "Dominadas" };
         private String[] series = { "3", "4", "5" };
         private String[] repes = { "10", "15", "20" };
+        public Window3 ventana3;
         //Prueba
         public MainWindow()
         {
             InitializeComponent();
-            
+            ventana3 = new Window3(this);
             mEjercicio.KeyDown += mEjercicio_KeyDown;
+            
+        }
+
+
+        private void activa(object sender, EventArgs e)
+        {
             string backgroundColorString = ConfigurationManager.AppSettings["BackgroundColor"];
             string colorBoton = ConfigurationManager.AppSettings["ButtonColor"];
             // Establecer el color de fondo de la ventana principal
@@ -123,11 +130,14 @@ namespace Proyecto
         }
         private void abrirConfig(object sender, RoutedEventArgs e)
         {
-            Window3 w = new Window3();
-            w.Show();
-            this.Close();
+           
+            ventana3.Show();
+            this.Hide();
 
         }
+
+       
+
         //No funciona
         private void agregar(object sender, RoutedEventArgs e)
         {

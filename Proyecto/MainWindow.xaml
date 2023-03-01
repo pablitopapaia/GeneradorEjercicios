@@ -7,7 +7,7 @@
         WindowStartupLocation="CenterScreen"
         mc:Ignorable="d"
         Background="Gray"
-        Title="Generador de Ejercicios" HorizontalAlignment="Center" Width="815.771" Height="491" Name="miVentana">
+        Title="Generador de Ejercicios" Activated="activa" HorizontalAlignment="Center" Width="815.771" Height="491" Name="miVentana">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="230*"/>

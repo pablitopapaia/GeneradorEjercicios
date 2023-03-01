@@ -10,9 +10,11 @@ namespace Proyecto
     /// </summary>
     public partial class Window3 : Window
     {
-       public Window3()
+       public MainWindow Inicio;
+       public Window3(MainWindow ventanaInicio)
         {
             InitializeComponent();
+            Inicio = ventanaInicio;
             string miClave = ConfigurationManager.AppSettings["BackgroundColor"];
             string miClave2 = ConfigurationManager.AppSettings["ButtonColor"];
             editFile.Text = miClave;
@@ -27,6 +29,14 @@ namespace Proyecto
             this.Close();
             
         }
-       
+        private void cerrada(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            if (this.Visibility == Visibility.Visible)
+            {
+                e.Cancel = true;
+                Inicio.Show();
+                this.Hide();
+            }
+        }
     }
 }
