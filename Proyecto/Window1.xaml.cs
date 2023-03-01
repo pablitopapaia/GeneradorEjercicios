@@ -13,7 +13,7 @@ namespace Proyecto
         public Window1()
         {
             InitializeComponent();
-            ResizeMode = ResizeMode.NoResize;
+           
         }
         private void Enviar(object sender, RoutedEventArgs e)
         {

@@ -11,10 +11,9 @@ namespace Proyecto
     /// </summary>
     public partial class Window3 : Window
     {
-        public Window3()
+       public Window3()
         {
             InitializeComponent();
-            ResizeMode = ResizeMode.NoResize;
             string miClave = ConfigurationManager.AppSettings["BackgroundColor"];
             string miClave2 = ConfigurationManager.AppSettings["ButtonColor"];
             editFile.Text = miClave;
@@ -26,7 +25,12 @@ namespace Proyecto
             Configuration config = ConfigurationManager.OpenExeConfiguration(ConfigurationUserLevel.None);
             config.AppSettings.Settings["BackgroundColor"].Value = editFile.Text;
             config.Save();
-            Close();
+            this.Close();
+        }
+        private void Abrir(object sender, RoutedEventArgs e)
+        {
+            MainWindow prueba = new MainWindow();
+            prueba.Show();
         }
     }
 }

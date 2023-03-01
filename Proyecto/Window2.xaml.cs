@@ -14,7 +14,7 @@ namespace Proyecto
         public Window2()
         {
             InitializeComponent();
-            ResizeMode = ResizeMode.NoResize;
+            
         }
 
         private void Enviar(object sender, RoutedEventArgs e)

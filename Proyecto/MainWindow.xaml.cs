@@ -25,7 +25,7 @@ namespace Proyecto
         public MainWindow()
         {
             InitializeComponent();
-            ResizeMode = ResizeMode.NoResize;
+            
             mEjercicio.KeyDown += mEjercicio_KeyDown;
             string backgroundColorString = ConfigurationManager.AppSettings["BackgroundColor"];
             string colorBoton = ConfigurationManager.AppSettings["ButtonColor"];
@@ -125,6 +125,7 @@ namespace Proyecto
         {
             Window3 w = new Window3();
             w.Show();
+            this.Close();
 
         }
         //No funciona
