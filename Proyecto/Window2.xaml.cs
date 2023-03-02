@@ -19,7 +19,7 @@ namespace Proyecto
 
         private void Enviar(object sender, RoutedEventArgs e)
         {
-            String rutaFichero = @"../../../Proyecto/usuarios/usuarios.txt";
+            String rutaFichero = "usuarios.txt";
             foreach (string line in File.ReadLines(rutaFichero))
             {
                 if (line.Split(':')[0].Equals(usu.Text.ToString()) && line.Split(':')[1].Equals(pass.Password.ToString()))

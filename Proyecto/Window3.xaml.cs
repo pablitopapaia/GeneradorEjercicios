@@ -1,7 +1,7 @@
 ﻿using System.Windows;
 using System.Configuration;
-
-
+using System.Windows.Media;
+using System.Reflection;
 
 namespace Proyecto
 {
@@ -11,21 +11,22 @@ namespace Proyecto
     public partial class Window3 : Window
     {
        public MainWindow Inicio;
+       public Color colorselecionado;
        public Window3(MainWindow ventanaInicio)
         {
             InitializeComponent();
             Inicio = ventanaInicio;
             string miClave = ConfigurationManager.AppSettings["BackgroundColor"];
             string miClave2 = ConfigurationManager.AppSettings["ButtonColor"];
-            editFile.Text = miClave;
-
+            // editFile.Text = miClave;
+            Ccolor.ItemsSource = typeof(Colors).GetProperties();
         }
 
         private void guardar(object sender, RoutedEventArgs e)
         {
-            Configuration config = ConfigurationManager.OpenExeConfiguration(ConfigurationUserLevel.None);
-            config.AppSettings.Settings["BackgroundColor"].Value = editFile.Text;
-            config.Save();
+            //Configuration config = ConfigurationManager.OpenExeConfiguration(ConfigurationUserLevel.None);
+            //config.AppSettings.Settings["BackgroundColor"].Value = editFile.Text;
+            //config.Save();
             this.Close();
             
         }
@@ -37,6 +38,15 @@ namespace Proyecto
                 Inicio.Show();
                 this.Hide();
             }
+        }
+
+        private void Ccolor_SelectionChanged(object sender, System.Windows.Controls.SelectionChangedEventArgs e)
+        {
+            colorselecionado = (Color)(Ccolor.SelectedItem as PropertyInfo).GetValue(Ccolor, null);
+            Configuration config = ConfigurationManager.OpenExeConfiguration(ConfigurationUserLevel.None);
+            config.AppSettings.Settings["BackgroundColor"].Value = colorselecionado+"";
+            config.Save();
+            this.Close();
         }
     }
 }

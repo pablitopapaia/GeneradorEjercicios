@@ -18,7 +18,7 @@ namespace Proyecto
         private void Enviar(object sender, RoutedEventArgs e)
         {
             String texto = usu.Text.ToString() + ":" + pass.Password.ToString();
-            String rutaFichero = @"../../../Proyecto/usuarios/usuarios.txt";
+            String rutaFichero = "usuarios.txt";
 
             using (StreamWriter streamWriter = File.AppendText(rutaFichero)) {
                 streamWriter.WriteLine(texto);
