@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:Proyecto"
         WindowStartupLocation="CenterScreen"
         mc:Ignorable="d"
-        Title="Login" Height="450" Width="800">
+        Title="Login" Height="450" Width="800" Closing="cerrada">
     <Grid>
         <Grid.Background>
             <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">

@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:Proyecto"
          WindowStartupLocation="CenterScreen"
         mc:Ignorable="d"
-        Title="Registro" Height="450" Width="800">
+        Title="Registro" Height="450" Width="800" Closing="cerrada">
     <Grid>
        <Grid.Background>
             <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
@@ -16,7 +16,7 @@
             </LinearGradientBrush>
         </Grid.Background>
         <StackPanel HorizontalAlignment="Center" Height="300"  VerticalAlignment="Center" Width="300">
-            <Label Content="Login" HorizontalAlignment="Center"  VerticalAlignment="Top" FontSize="30" Height="50" Width="119"/>
+            <Label Content="Registrarse" HorizontalAlignment="Center"  VerticalAlignment="Top" FontSize="30" Height="50"/>
             <Label x:Name="t1" Content="Usuario" HorizontalAlignment="Center"  VerticalAlignment="Center" Height="26" Width="50" />
             <TextBox x:Name="usu" HorizontalAlignment="Center" Height="18" TextWrapping="Wrap" VerticalAlignment="Top" Width="112" />
             <Label x:Name="t2" Content="Contraseña" HorizontalAlignment="Center"  VerticalAlignment="Top" Height="26" Width="70" />

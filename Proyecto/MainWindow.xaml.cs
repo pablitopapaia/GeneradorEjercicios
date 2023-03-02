@@ -2,8 +2,8 @@
 using System.Windows;
 using System.Configuration;
 using System.Windows.Input;
-using System.Linq;
-using System.Xml.Linq;
+//using System.Linq;
+//using System.Xml.Linq;
 using System.Windows.Media;
 
 namespace Proyecto
@@ -22,40 +22,33 @@ namespace Proyecto
         private String[] series = { "3", "4", "5" };
         private String[] repes = { "10", "15", "20" };
         public Window3 ventana3;
+        public Window1 ventana1;
+        public Window2 ventana2;
         public MainWindow()
         {
             InitializeComponent();
+            ventana1 = new Window1(this);
+            ventana2 = new Window2(this);
             ventana3 = new Window3(this);
             mEjercicio.KeyDown += mEjercicio_KeyDown;
-            /*string backgroundColorString = ConfigurationManager.AppSettings["BackgroundColor"];
-            string colorBoton = ConfigurationManager.AppSettings["ButtonColor"];
-            // Establecer el color de fondo de la ventana principal
-            Color backgroundColor = (Color)ColorConverter.ConvertFromString(backgroundColorString);
-            Color backBoton = (Color)ColorConverter.ConvertFromString(colorBoton);
-            miVentana.Background = new SolidColorBrush(backgroundColor);
-            btnAgregar.Background = new SolidColorBrush(backBoton);
-            btnGenerar.Background = new SolidColorBrush(backBoton);*/
-
         }
 
 
         private void activa(object sender, EventArgs e)
         {
-            /*if (ventana3.colorselecionado != null)
+            if (ventana3.seHaSeleccionado)
             {
-               // miVentana.Background = new SolidColorBrush(ventana3.colorselecionado);
-            }*/
-            //else {
-                //miVentana.Background = new SolidColorBrush(ventana3.colorselecionado);
+                miVentana.Background = new SolidColorBrush(ventana3.colorselecionado);
+            }
+            else {
                 string backgroundColorString = ConfigurationManager.AppSettings["BackgroundColor"];
                 string colorBoton = ConfigurationManager.AppSettings["ButtonColor"];
-                // Establecer el color de fondo de la ventana principal
                 Color backgroundColor = (Color)ColorConverter.ConvertFromString(backgroundColorString);
                 Color backBoton = (Color)ColorConverter.ConvertFromString(colorBoton);
                 miVentana.Background = new SolidColorBrush(backgroundColor);
                 btnAgregar.Background = new SolidColorBrush(backBoton);
                 btnGenerar.Background = new SolidColorBrush(backBoton);
-            //}
+            }
             
         }
 
@@ -133,15 +126,14 @@ namespace Proyecto
 
         private void registrarse(object sender, RoutedEventArgs e)
         {
-            Window1 w = new Window1();
-            w.Show();
+            ventana1.Show();
+            this.Hide();
         }
 
         private void iniciar(object sender, RoutedEventArgs e)
         {
-            Window2 w = new Window2();
-            w.Show();
-            
+            ventana2.Show();
+            this.Hide();
         }
         private void abrirConfig(object sender, RoutedEventArgs e)
         {
@@ -152,8 +144,6 @@ namespace Proyecto
         private void cerrar(object sender, System.ComponentModel.CancelEventArgs e)
         {
             e.Cancel = true;
-            Configuration config = ConfigurationManager.OpenExeConfiguration(ConfigurationUserLevel.None);
-            config.Save();
             Application.Current.Shutdown();
         }
 
@@ -191,16 +181,6 @@ namespace Proyecto
                         break;
                 }
             }*/
-        }
-
-        private void btnAplicar_Click(object sender, RoutedEventArgs e)
-        {
-            string backgroundColorString = ConfigurationManager.AppSettings["BackgroundColor"];
-            //string colorBoton = ConfigurationManager.AppSettings["ButtonColor"];
-            // Establecer el color de fondo de la ventana principal
-            Color backgroundColor = (Color)ColorConverter.ConvertFromString(backgroundColorString);
-            //Color backBoton = (Color)ColorConverter.ConvertFromString(colorBoton);
-            miVentana.Background = new SolidColorBrush(ventana3.colorselecionado);
         }
     }
 }

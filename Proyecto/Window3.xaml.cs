@@ -12,6 +12,7 @@ namespace Proyecto
     {
        public MainWindow Inicio;
        public Color colorselecionado;
+       public bool seHaSeleccionado = false;
        public Window3(MainWindow ventanaInicio)
         {
             InitializeComponent();
@@ -46,6 +47,7 @@ namespace Proyecto
             Configuration config = ConfigurationManager.OpenExeConfiguration(ConfigurationUserLevel.None);
             config.AppSettings.Settings["BackgroundColor"].Value = colorselecionado+"";
             config.Save();
+            seHaSeleccionado = true;
             this.Close();
         }
     }

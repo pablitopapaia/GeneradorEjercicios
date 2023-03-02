@@ -42,7 +42,7 @@
             </Button>
             <Button Content="Agregar" x:Name="btnAgregar" HorizontalAlignment="Left" VerticalAlignment="Top" Click="agregar" Foreground="#FFEEE5E5" FontSize="22" Background="Purple">
             </Button>
-            <Button Content="Aplicar" x:Name="btnAplicar" Click="btnAplicar_Click" FontSize="22" Background="Purple" Height="33" Width="81" Foreground="#FFEEE5E5" HorizontalAlignment="Left" VerticalAlignment="Top" />
+            
         </StackPanel>
         <Rectangle HorizontalAlignment="Center" Height="144"  Stroke="Black" VerticalAlignment="Top" Width="173" Grid.Row="4" Grid.ColumnSpan="2">
             <Rectangle.Fill>
