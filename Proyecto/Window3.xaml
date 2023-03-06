@@ -20,7 +20,6 @@
         </Grid.RowDefinitions>
         
         <Label Content="Configuración" Grid.Column="1" HorizontalAlignment="Center"  Grid.Row="1" VerticalAlignment="Top" FontSize="22" Margin="74,0,75,0"  />
-        <Button Content="Guardar" Grid.Column="1" HorizontalAlignment="Center" Click="guardar" Grid.Row="3" VerticalAlignment="Center" Width="75" Background="Gold"/>
         <ComboBox x:Name="Ccolor" SelectionChanged="Ccolor_SelectionChanged" Grid.Column="1"  Grid.Row="2" VerticalAlignment="Top" >
             <ComboBox.ItemTemplate>
                 <DataTemplate>

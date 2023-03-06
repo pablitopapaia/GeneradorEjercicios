@@ -23,14 +23,6 @@ namespace Proyecto
             Ccolor.ItemsSource = typeof(Colors).GetProperties();
         }
 
-        private void guardar(object sender, RoutedEventArgs e)
-        {
-            //Configuration config = ConfigurationManager.OpenExeConfiguration(ConfigurationUserLevel.None);
-            //config.AppSettings.Settings["BackgroundColor"].Value = editFile.Text;
-            //config.Save();
-            this.Close();
-            
-        }
         private void cerrada(object sender, System.ComponentModel.CancelEventArgs e)
         {
             if (this.Visibility == Visibility.Visible)
